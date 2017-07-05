@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 /**
@@ -8,7 +9,7 @@ public class BattingStatistics {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int atBats = 0;
-        double basesEarned = 0;
+        //double basesEarned = 0;
 
         System.out.println("Please enter the number of At-bats: ");
         atBats = scan.nextInt();
@@ -60,7 +61,14 @@ public class BattingStatistics {
         double batAvg = actualHits/atBats;
         double slugPercent = basesTotal/atBats;
 
-        System.out.println("Your batting average is: " + batAvg + "\n" +  "Your slug percentage is: " + slugPercent);
+        System.out.printf("Your batting average is: " + "%.3f" , batAvg);
+        System.out.println();
+        System.out.printf("Your slug percentage is: " + "%.3f", slugPercent);
+        /*System.out.printf("%.3f", batAvg);
+        System.out.println();
+        System.out.println("Your slug percentage is: ");
+        System.out.printf("%.3f" , slugPercent);
+        */
 
         //now I need to set the value for each index at 0 1 2 3 for out single double trple homerun...
 
