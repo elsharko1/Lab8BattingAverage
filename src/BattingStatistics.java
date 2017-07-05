@@ -12,7 +12,12 @@ public class BattingStatistics {
         //double basesEarned = 0;
 
         System.out.println("Please enter the number of At-bats: ");
-        atBats = scan.nextInt();
+            atBats = scan.nextInt();
+            while (atBats < 0){
+                System.out.println("Invalid input, please enter a valid number: ");
+                atBats = scan.nextInt();
+
+            }
 
         int[] arrSize = new int[atBats];
 
